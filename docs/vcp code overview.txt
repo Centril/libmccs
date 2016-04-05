@@ -1,0 +1,175 @@
+Table 8-2: Preset Operations VCP Codes
+
+04h Restore factory defaults                     WO  NC  Restore all factory presets including luminance/contrast, geometry, color and TV defaults.
+05h Restore factory luminance/contrast defaults  WO  NC  Restores factory defaults for luminance and contrast adjustments.
+06h Restore factory geometry defaults            WO  NC  Restore factory defaults for geometry adjustments.
+08h Restore factory color defaults               WO  NC  Restore factory defaults for color settings.
+0Ah Restore factory TV defaults                  WO  NC  Restore factory defaults for TV functions.
+B0h Settings                                     WO  NC  Store/restore the user saved values for current mode.
+
+
+
+Table 8-4: Image Adjustment VCP Codes
+
+0Bh Color temperature increment                  RO  NC  Read the minimum increment in which color temperature can be adjusted.
+0Ch Color temperature request                    RW  C   Request a color temperature (in K).
+0Eh Clock                                        RW  C   Adjust the video sampling clock frequency
+10h Luminance                                    RW  C   Adjust the luminance of the image.
+11h Flesh tone enhancement                       RW  NC  Select contrast enhancement algorithm.
+12h Contrast                                     RW  C   Adjust the contrast of the image.
+13h Backlight control                            RW  C   Adjust the backlight.
+14h Select Color preset                          RW  NC  Select a specified color temperature.
+16h Video Gain (Drive): Red                      RW  C   Adjust the luminance of red pixels.
+17h User Color Vision Compensation               RW  C   Adjust the degree of compensation.
+18h Video Gain (Drive): Green                    RW  C   Adjust the luminance of green pixels.
+1Ah Video Gain (Drive): Blue                     RW  C   Adjust the luminance of blue pixels.
+1Eh Auto Setup                                   RW  NC  Perform auto setup function.
+1Fh Auto Color Setup                             RW  NC  Perform auto color setup function.
+2Eh Gray Scale Expansion                         RW  NC  Expands the gray scale either in the near white region or the near black region (or both).
+3Eh Clock Phase                                  RW  C   Adjust the phase shift of the sampling clock.
+56h Horizontal Moiré                             RW  C   Adjust the horizontal picture moiré cancellation.
+59h 6 Axis Saturation Control: Red               RW  C   Adjust the red saturation for 6-axis color
+5Ah 6 Axis Saturation Control: Yellow            RW  C   Adjust the yellow saturation for 6-axis color
+5Bh 6 Axis Saturation Control: Green             RW  C   Adjust the green saturation for 6-axis color
+5Ch 6 Axis Saturation Control: Cyan              RW  C   Adjust the cyan saturation for 6-axis color
+5Dh 6 Axis Saturation Control: Blue              RW  C   Adjust the blue saturation for 6-axis color
+5Eh 6 Axis Saturation Control: Magenta           RW  C   Adjust the magenta saturation for 6-axis color
+6Ch Video Black Level: Red                       RW  C   Adjust the black level of the red video.
+6Eh Video Black Level: Green                     RW  C   Adjust the black level of the green video.
+70h Video Black Level: Blue                      RW  C   Adjust the black level of the blue video.
+72h Gamma                                        RW  NC  Select an absolute or relative value for gamma of the image.
+73h LUT Size                                     RO  T   Provides the number of entries and number of bits/entry for the red/green/blue LUT of the image.
+74h Single Point LUT Operation                   RW  T   Load a a single point within a display’s color LUT.
+75h Block LUT Operation                          RW  T   Load multiple values into a display’s LUT.
+87h Sharpness                                    RW  C   Adjust the edge sharpness of image features.
+88h Velocity Scan Modulation                     RW  C   Adjust the velocity modulation of the horizontal scan as a function of a change in the luminance level.
+8Ah Color Saturation                             RW  C   Adjust the color difference components of the video signal.
+8Ch TV-Sharpness                                 RW  C   Adjust the high frequency components of the video signal.
+8Eh TV-Contrast                                  RW  C   Adjust the ratio between whites and blacks in the video.
+90h Hue                                          RW  C   Adjust the balance between blue and read in the video.
+92h TV-Black Level/Luminance                     RW  C   Adjust the black level of the video, resulting in an increase of the luminance level of the video.
+9Ah Window Background                            RW  C   Adjust the contrast ratio between the area of the window and the rest of the desktop.
+9Bh 6 Axis Hue Control: Red                      RW  C   Adjust the red hue for 6-axis color
+9Ch 6 Axis Hue Control: Yellow                   RW  C   Adjust the yellow hue for 6-axis color
+9Dh 6 Axis Hue Control: Green                    RW  C   Adjust the green hue for 6-axis color
+9Eh 6 Axis Hue Control: Cyan                     RW  C   Adjust the cyan hue for 6-axis color
+9Fh 6 Axis Hue Control: Blue                     RW  C   Adjust the blue hue for 6-axis color
+A0h 6 Axis Hue Control: Magenta                  RW  C   Adjust the magenta hue for 6-axis color
+A2h Auto Setup On/Off                            WO  NC  Turn on/off the auto setup function.
+A4h Window Mask Control                          RW  T   Set the coordinates of a window.
+A5h Window Select                                RW  C   Change the selected window.
+AAh Screen Orientation                           RO  NC  Query the orientation of the screen.
+D4h Stereo Video Mode                            RW  NC  Select the video mode with respect to 2D or 3D video.
+DCh Display Application                          RW  NC  Select a preset optimized by manufacturer for an application type or select a user defined setting.
+
+
+
+Table 8-6: Display Control VCP Codes
+
+ACh Horizontal Frequency                         RO  C   Horizontal synchronization signal frequency in Hz as determined by the display.
+AEh Vertical Frequency                           RO  C   Vertical synchronization signal frequency in 0.01Hz as determined by the display.
+B4h Source Timing Mode                           RW  T   Query the timing mode being sent by the host.
+B5h Source Color Coding                          WO  NC  Specify the color coding method that is being used.
+C0h Display Usage Time                           RO  C   Query the current value of ‘active power on’ time (in hours).
+C8h Display Controller Type                      RO  NC  Query the controller type being used by the display.
+C9h Display Firmware Level                       RO  C   Query the firmware version of the display.
+CAh OSD                                          RW  NC  Query the current state of the display OSD
+CCh OSD Language                                 RW  NC  Select the display OSD language.
+D6h Power Mode                                   RW  NC  Select the power mode.
+DBh Image Mode                                   RW  NC  Select the aspect-ratio of the displayed TV image.
+DFh VCP Version                                  RO  NC  Query the version number of the MCCS standard recognized by the display.
+
+
+
+Table 8-8: Geometry VCP Codes
+
+20h Horizontal Position (Phase)                  RW  C   Adjust the horizontal position of the display.
+22h Horizontal Size                              RW  C   Adjust the width of the image.
+24h Horizontal Pincushion                        RW  C   Adjust the convex of the right/left side of the display.
+26h Horizontal Pincushion Balance                RW  C   Adjust the center section of the image toward the right/left side of the display
+28h Horizontal Convergence R/B                   RW  C   Adjust the shift of the red pixels to the right/left across the image and the blue pixels left/right across the image, with respect to the green pixels.
+29h Horizontal Convergence M/G                   RW  C   Adjust the shift of the magenta pixels to the right/left across the image and the green pixels left/right across the image.
+2Ah Horizontal Linearity                         RW  C   Adjust the density of pixels in the image center.
+2Ch Horizontal Linearity Balance                 RW  C   Adjust the shift of the density of pixels from the left/right side to the right/left side of the image.
+30h Vertical Position {Phase}                    RW  C   Adjust the vertical position of the display.
+32h Vertical Size                                RW  C   Adjust the height of the image.
+34h Vertical Pincushion                          RW  C   Adjust the convex of the top/bottom side of the display.
+36h Vertical Pincushion Balance                  RW  C   Adjust the center section of the image toward the top/bottom side of the display.
+38h Vertical Convergence R/B                     RW  C   Adjust the shift of the red pixels to the top/bottom across the image and the blue pixels bottom/top across the image, with respect to the green pixels.
+39h Vertical Convergence M/G                     RW  C   Adjust the shift of the magenta pixels to the top/bottom across the image and the green pixels bottom/top across the image.
+3Ah Vertical Linearity                           RW  C   Adjust the density of scan lines in the image center.
+3Ch Vertical Linearity Balance                   RW  C   Adjust the shift of the density of scan lines from the top/bottom end to the bottom/top end of the image.
+40h Horizontal Parallelogram                     RW  C   Adjust the shift of the top section of the image to the right/left with respect to the bottom section of the image.
+41h Vertical Parallelogram                       RW  C   Adjust the shift of the left section of the image to the top/bottom with respect to the right section of the image.
+42h Horizontal Keystone                          RW  C   Adjust the horizontal size at the top of the image with respect to the horizontal size at the bottom of the image.
+43h Vertical Keystone                            RW  C   Adjust the vertical size at the left of the image with respect to the vertical size at the right of the image.
+44h Rotation                                     RW  C   Adjust the rotation of the image.
+46h Top Corner Flare                             RW  C   Adjust the distance between the left and right sides at the top of the image.
+48h Top Corner Hook                              RW  C   Adjust the position of the top of the image to the right/left.
+4Ah Bottom Corner Flare                          RW  C   Adjust the distance between the left and right sides at the bottom of the image.
+4Ch Bottom Corner Hook                           RW  C   Adjust the position of the bottom of the image to the right/left.
+82h Horizontal Mirror (Flip)                     RW  NC  Mirror horizontally.
+84h Vertical Mirror (Flip)                       RW  NC  Mirror vertically.
+86h Display Scaling                              RW  NC  Adjust the scaling of the image.
+95h Window Position (TL_X)                       RW  C   Adjust the (unscaled) top left X coordinate of an area of the image.
+96h Window Position (TL_Y)                       RW  C   Adjust the (unscaled) top left Y coordinate of an area of the image.
+97h Window Position (BR_X)                       RW  C   Adjust the (unscaled) bottom right X coordinate of an area of the image.
+98h Window Position (BR_Y)                       RW  C   Adjust the (unscaled) bottom right Y coordinate of an area of the image.
+DAh Scan Mode                                    RW  NC  Controls the scan characteristics.
+
+
+
+Table 8-10: Miscellaneous Functions VCP Codes
+
+01h Degauss                                      WO  NC  Perform a degauss cycle of a CRT display.
+02h New Control Value                            RW  NC  Indicate that a display’s user controls has been used to change a control value (excluding power control).
+03h Soft Controls                                RW  NC  Allows display controls to be used as soft keys.
+52h Active Control                               RO  NC  Obtain the VCP codes stored in a “FIFO stack”
+54h Performance Preservation                     RW  NC  Control up to 16 features aimed at maintaining the performance of a display.
+60h Input Source                                 RW  T   Select the active video source.
+66h Enable Ambient Light Sensor                  RW  NC  Control the action of an ambient light sensor.
+76h Remote Procedure Call                        WO  T   Initiate a routine/macro resident in the display.  
+78h EDID Operation                               RO  T   Select a 128-byte block of EDID to be read.
+8Bh TV-Channel Up/Down                           WO  NC  Change TV-channels.
+B2h Flat Panel Sub-Pixel Layout                  RO  NC  Query the type of LCD sub-pixel structure.
+B6h Display Technology Type                      RO  NC  Query the base technology type.
+C2h Display Descriptor Length                    RO  C   Query the length (in bytes) of non-volatile storage in the display available for writing a display descriptor.
+C3h Transmit Display Descriptor                  RW  T   Read/write display descriptor from/to non-volatile storage in the display.
+C4h Enable Display of ‘Display Descriptor’       RW  NC  Enable the display of the display descriptor when no video is being received.
+C6h Application Enable Key                       RO  NC  A value used to allow an application to only operate with known products.
+CDh Status Indicators                            RW  NC  Capability to control up to 16 LED (or similar) indicators.
+CEh Auxiliary Display Size                       RO  NC  Get number of characters of the auxiliary alpha-numeric display associated with the primary display.
+CFh Auxiliary Display Data                       WO  T   Write characters to the auxiliary alpha-numeric display associated with the primary display.
+D0h Output Select                                RW  T   Select the active video output.
+D2h Asset Tag                                    RW  T   Read/write an Asset-Tag from/to a display.
+D7h Auxiliary Power Output                       RW  NC  Control output of an auxiliary power output from a display to a host device.
+DEh Scratch Pad                                  RW  NC  Read/write 2-byte of volatile storage for use by software applications.
+
+
+
+Table 8-12: Audio Function VCP Codes
+
+62h Audio Speaker Volume                         RW  NC  Adjust the audio volume.
+63h Audio Speaker Select                         RW  NC  Select the audio speakers.
+64h Audio Microphone Volume                      RW  C   Adjust the microphone gain.
+8Dh Audio Mute                                   RW  NC  Mute/unmute the audio.
+8Fh Audio Treble                                 RW  NC  Adjust the high frequency component of the audio.
+91h Audio Bass                                   RW  NC  Adjust the low frequency component of the audio.
+93h Audio Balance L/R                            RW  NC  Adjust the left/right balance of audio output.
+94h Audio Processor Mode                         RW  NC  Select the audio processing mode.
+
+
+
+Table 8-14: DPVL Support VCP Codes
+
+B7h Monitor Status                               RO  NC  Video mode and status of a DPVL capable display.
+B8h Packet Count                                 RW  C   Counter for the DPVL packets received.
+B9h Monitor X Origin                             RW  C   The X origin of the display in the virtual screen.
+BAh Monitor Y Origin                             RW  C   The Y origin of the display in the virtual screen.
+BBh Header Error Count                           RW  C   Error counter for the DPVL header.
+BCh Body CRC Error Count                         RW  C   CRC error counter for the DPVL body containing video data.
+BDh Client ID                                    RW  C   Assigned identification number for the display.
+BEh Link Control                                 RW  NC  Query the status of the DVI link.
+
+
+
